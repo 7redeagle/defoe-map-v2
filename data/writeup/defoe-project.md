@@ -1,12 +1,4 @@
-title: “Plotting Defoe's Adventure Novels”
-author: inachen
-tags: [projects]
-img: 
-description: > 
----
-
-[Project Link](https://sites.google.com/site/endprojectmap/)
----
+# Plotting Defoe's Adventure Novels
 
 ## I. Inspiration
 My research project was an emotion map of Daniel Defoe’s adventure novels. The novels used were *Robinson Crusoe (1719), Captain Singleton (1720)*, and *Colonel Jack (1722).* The map was meant to show the emotions associated with locations mentioned (not necessarily visited) in these books . The inspiration for this project was an emotion map created by Christian Nold. His maps represented the emotions, opinions and dialogue of the local population. The map was drawn from a pile of drawings made by the people in the city to portray their perception of the place they live in. I was fascinated by how he managed to combine this static and hyper-accurate medium with something as abstract and ambiguous as human emotions. I wanted to create something similar to Christian Nold’s map: a world map of the 18th-century drawn from the passages of Defoe’s novels.
@@ -15,11 +7,6 @@ My research project was an emotion map of Daniel Defoe’s adventure novels. The
 I chose this project because I was curious about Britain’s relationship with other countries at that time, primarily Spain and France. I wanted to see if these novels accurately portray British sentiments towards outsiders by comparing fiction with nonfiction (travel literature). I was aware that Britain held a great deal of  anti-French sentiment during the 18th-century and I wanted to see if Defoe’s novels portrayed a similar feeling towards the French. My original research question was centered around what emotions are associated with which location and why, but that question seems far too broad, but I ultimately narrowed my question down how Defoe describes these locations and how his descriptions evoke a negative, positive or neutral emotion. At the end of the 10-week internship, I had created a map, while not up to the level of Nold’s artistry, does include a positive, negative or neutral rating for the locations mentioned in the three Defoe novels I finished analyzing. 
 
 I soon realized my earlier methods were too time consuming so I sought for a more machine-oriented way to streamline the process. My new method involved NER tagging the text (taken from Gutenberg) then locating the passages with those location tags and running those passages through two sentiment analysis tools before providing my own score of that passage. The two sentiment analysis tools used were Vader and Stanford sentiment analysis tool. Vader seems to provide a more positive rating while Stanford mostly gives out negative ratings to the passages. I then used ArcGIS to create a map for Defoe’s novels, which has different layers for each novel followed by separate layers for Vader, Stanford and my score of that novel. This method focused on locations mentioned in the text rather than the actual location the characters were in. 
-
-![Robinson Crusoe's Journey](https://www.dropbox.com/s/1d7ie622dhw16jv/Cruesoe_Map.png?dl=1)
-
-
-![Defoe's Map](https://www.dropbox.com/s/c5ea4ns4fgtrgyl/Defoe_Map.png?dl=1)
 
 As I continued working on this project, I added a secondary project using AntConc. I found out that if I collocate (finding the most frequent words around a certain word) a location word then I could get peripheral words that provide a general idea of the author’s description of that location. For example, in Robinson Crusoe, when I did a collocation search for the word  ‘Africa,’ the most frequent words to appear were: vulgarly, enterprises, productions, leopards, sailors, desert, tigers, shipwrecked, perished, lions, skins, misfortunes. These words painted Africa as a wild and dangerous place that was also very profitable. Another example was the location word ‘Sallee’ which produced the results: Turkish, Turks, rovers, moors, war, emperor, devoured, prisoners. This provided a very negative illustration a place controlled by the Turks who were barbarians that took prisoners. This is supported 18th-century British sentiments towards the Turks. 
 
