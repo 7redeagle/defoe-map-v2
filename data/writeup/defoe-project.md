@@ -29,6 +29,18 @@ Heuser, Ryan., et al. “The Emotions of London.” *Stanford University*, Oct. 
 
 Nold, Christian. “Stockport Emotion Map.” 2007, http://stockport.emotionmap.net/map.htm.
 
+### NER Tagged Texts (location, person, and organization):
+
+<a href="{{ site.baseurl }}/download/crusoe.txt" target="blank">Robinson Crusoe by Daniel Defoe</a>
+
+<a href="{{ site.baseurl }}/download/jack.txt" target="blank">Colonel Jack by Daniel Defoe</a>
+
+<a href="{{ site.baseurl }}/download/singleton.txt" target="blank">Captain Singleton by Daniel Defoe</a>
+
+<a href="{{ site.baseurl }}/download/sentimental.txt" target="blank">A Sentimental Journey Through France and Italy by Laurence Sterne</a>
+
+<a href="{{ site.baseurl }}/download/singleton.txt" target="blank">Captain Cook's Journal During His First Voyage Around the World by James Cook</a>
+
 ## VI. Works Consulted
 Bridges, Roy. “Exploration and Travel Outside Europe (1720-1914).” The Cambridge Companion to Travel Writing, edited by Peter Hulme and Tim Youngs, Cambridge University Press, Cambridge, 2002, pp. 53–69. Cambridge Companions to Literature.
 
