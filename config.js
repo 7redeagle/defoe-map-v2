@@ -96,8 +96,152 @@ var config = {
 		"stroke": true
 	},
 	"layers": [{
-		"id": "novels",
-		"name": "Defoe's Novels' Locations",
-		"type": "geoJson",
-	}]
+			"id": "theatres",
+			"name": "Theatres",
+			"type": "geoJSON",
+			"cluster": true,
+			"showCoverageOnHover": false,
+			"minZoom": 12,
+			"url": "./data/theatres.geojson",
+			"icon": {
+				"iconUrl": "./img/theater.png",
+				"iconSize": [24, 28]
+			},
+			"style": {
+				"stroke": true,
+				"fillColor": "#00FFFF",
+				"fillOpacity": 0.5,
+				"radius": 10,
+				"weight": 0.5,
+				"opacity": 1,
+				"color": '#727272',
+			},
+			"visible": false,
+			// "label": {
+			// 	"name": "NAME",
+			// 	"minZoom": 14
+			// }
+		},
+		{
+			"id": "museums",
+			"type": "geoJSON",
+			"cluster": true,
+			"showCoverageOnHover": false,
+			"minZoom": 12,
+			"popup": true,
+			"url": "data/museums.geojson",
+			"style": {
+				"stroke": true,
+				"fillColor": "#00FFFF",
+				"fillOpacity": 0.5,
+				"radius": 10,
+				"weight": 0.5,
+				"opacity": 1,
+				"color": '#727272'
+			},
+			"icon": {
+				"iconUrl": "./img/museum.png",
+				"iconSize": [24, 28]
+			},
+			"visible": true,
+			// "label": {
+			// 	"name": "NAME",
+			// 	"minZoom": 14
+			// }
+			"outFields": [{
+				"name": "NAME",
+				"alias": "name"
+			}, ]
+		}, {
+			"id": "cities",
+			"name": "US cities (feature)",
+			"type": "agsFeatureLayer",
+			"cluster": true,
+			"showCoverageOnHover": false,
+			"removeOutsideVisibleBounds": true,
+			"url": "http://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0",
+			"popup": true,
+			"tooltipField": "areaname",
+			"outFields": [{
+					"name": "areaname",
+					"alias": "Name"
+				},
+				{
+					"name": "st",
+					"alias": "State"
+				},
+				{
+					"name": "pop2000",
+					"alias": "Population"
+				},
+				{
+					"name": "class",
+					"alias": "Class"
+				},
+				{
+					"name": "objectid"
+				}
+			],
+			"visible": true,
+			"queryWidget": {
+				"queries": [{
+						"name": "areaname",
+						"alias": "Name",
+						"defaultOperator": "starts with"
+					},
+					{
+						"name": "pop2000",
+						"alias": "Population",
+						"type": "numeric"
+					},
+					{
+						"name": "capital",
+						"alias": "Capital",
+						"type": "boolean"
+					}
+				],
+				"outFields": [{
+						"name": "areaname",
+						"alias": "Name"
+					},
+					{
+						"name": "st",
+						"alias": "State"
+					},
+					{
+						"name": "pop2000",
+						"alias": "Population"
+					},
+					{
+						"name": "class",
+						"alias": "Class"
+					},
+					{
+						"name": "capital",
+						"alias": "Capital",
+						"type": "boolean"
+					},
+				]
+			},
+			"filters": [{
+					"name": "pop2000",
+					"alias": "Population",
+					"type": "numeric"
+				},
+				{
+					"name": "st",
+					"alias": "State abbreviation"
+				},
+			],
+			"style": {
+				"stroke": true,
+				"fillColor": "#00FFFF",
+				"fillOpacity": 0.5,
+				"radius": 10,
+				"weight": 0.5,
+				"opacity": 1,
+				"color": '#727272'
+			},
+		},
+	]
 }
