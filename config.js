@@ -96,7 +96,7 @@ var config = {
 		"stroke": true
 	},
 	"layers": [{
-		"id": "museums",
+		"id": "Defoe's Novel Locations",
 		"type": "geoJSON",
 		"cluster": true,
 		"showCoverageOnHover": false,
