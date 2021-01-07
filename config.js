@@ -12,7 +12,7 @@ var config = {
 	},
 	"about": {
 		"title": "Plotting Defoe's Novels",
-		"contents": "<p>This is an open-source version of the excellent <a href='https://github.com/bmcbride/bootleaf'>Bootleaf map </a>started by Bryan McBride.</p><p>It's designed for rapid web map development. See <a href='https://github.com/iag-geo/bootleaf'>https://github.com/iag-geo/bootleaf</a> for more information.</p><p>Chage this message in the config file</p>"
+		"contents": "<p>My research project was an emotion map of Daniel Defoe’s adventure novels. The novels used were Robinson Crusoe (1719), Captain Singleton (1720), and Colonel Jack (1722). The map was meant to show the emotions associated with locations mentioned (not necessarily visited) in these books using sentiment analysis tools and my own interpretation. The locations in these passages are graded as having a negative, neutral or positive sentiment.</p><p>Read more about<a href='https://github.com/tiger-fish/defoe-v2'> this project here</a>.</p><p>This was made using <a href='https://github.com/iag-geo/bootleaf'>https://github.com/iag-geo/bootleaf</a>.</p><div><h2>Compass: click on markers</h2><p>Vader: Score using <a href='https: //github.com/cjhutto/vaderSentiment'>Vader Sentiment Analysis Tool</a></p><p>Stanford: Score using <a href='https://nlp.stanford.edu/sentiment/'>Stanford Sentiment Analysis Tool</a></p><p>My Score: Score using my own intepretation of the passage associated with the location word</p><p>Stanford: Score using <a href='https://nlp.stanford.edu/sentiment/'>Stanford Sentiment Analysis Tool</a></p></div>"
 	},
 	"controls": {
 		"zoom": {
