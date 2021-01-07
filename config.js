@@ -2,7 +2,7 @@ var config = {
 	"requireArcGISLogin": false, // Does the user need to log in to ArcGIS Online or ArcGIS Server?
 	"tokenUrl": 'https://www.arcgis.com/sharing/generateToken', // ArcGIS token generation URL
 
-	"title": "Plotting Defoe's Novels",
+	"title": "Plotting Defoe's Travel Novels",
 	"start": {
 		// "maxZoom": 16,
 		"center": [46, 7],
