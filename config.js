@@ -113,8 +113,8 @@ var config = {
 			"color": '#727272'
 		},
 		"icon": {
-			"iconUrl": "./img/museum.png",
-			"iconSize": [24, 28]
+			"iconUrl": "./img/ship.png",
+			"iconSize": [50, 50]
 		},
 		"visible": true,
 		// "label": {
