@@ -2,7 +2,7 @@ var config = {
 	"requireArcGISLogin": false, // Does the user need to log in to ArcGIS Online or ArcGIS Server?
 	"tokenUrl": 'https://www.arcgis.com/sharing/generateToken', // ArcGIS token generation URL
 
-	"title": "Plotting Defoe's Novels",
+	"title": "Plotting Defoe's Travel Novels",
 	"start": {
 		// "maxZoom": 16,
 		"center": [46, 7],
@@ -12,7 +12,7 @@ var config = {
 	},
 	"about": {
 		"title": "Plotting Defoe's Novels",
-		"contents": "<p>This is an open-source version of the excellent <a href='https://github.com/bmcbride/bootleaf'>Bootleaf map </a>started by Bryan McBride.</p><p>It's designed for rapid web map development. See <a href='https://github.com/iag-geo/bootleaf'>https://github.com/iag-geo/bootleaf</a> for more information.</p><p>Chage this message in the config file</p>"
+		"contents": "<p>My research project was an emotion map of Daniel Defoe’s adventure novels. The novels used were Robinson Crusoe (1719), Captain Singleton (1720), and Colonel Jack (1722). The map was meant to show the emotions associated with locations mentioned (not necessarily visited) in these books using sentiment analysis tools and my own interpretation. The locations in these passages are graded as having a negative, neutral or positive sentiment.</p><p>Read more about<a href='https://github.com/tiger-fish/defoe-v2'> this project here</a>.</p><p>This was made using <a href='https://github.com/iag-geo/bootleaf'>https://github.com/iag-geo/bootleaf</a>.</p><div><h2>Compass: click on markers</h2><p>Vader: Score using <a href='https: //github.com/cjhutto/vaderSentiment'>Vader Sentiment Analysis Tool</a></p><p>Stanford: Score using <a href='https://nlp.stanford.edu/sentiment/'>Stanford Sentiment Analysis Tool</a></p><p>My Score: Score using my own intepretation of the passage associated with the location word</p><p>AntConc Collocation: Peripheral Words surrounding the location word using <a href='https://www.laurenceanthony.net/software/antconc/'>AntConc</a></p></div>"
 	},
 	"controls": {
 		"zoom": {
@@ -96,8 +96,34 @@ var config = {
 		"stroke": true
 	},
 	"layers": [{
-		"id": "novels",
-		"name": "Defoe's Novels' Locations",
-		"type": "geoJson",
-	}]
+		"id": "Defoe's Novel Locations",
+		"type": "geoJSON",
+		"cluster": true,
+		"showCoverageOnHover": false,
+		// "minZoom": 12,
+		"popup": true,
+		"url": "data/defoe.geojson",
+		"style": {
+			"stroke": true,
+			"fillColor": "#00FFFF",
+			"fillOpacity": 0.5,
+			"radius": 10,
+			"weight": 0.5,
+			"opacity": 1,
+			"color": '#727272'
+		},
+		"icon": {
+			"iconUrl": "./img/ship.png",
+			"iconSize": [50, 50]
+		},
+		"visible": true,
+		// "label": {
+		// 	"name": "NAME",
+		// 	"minZoom": 14
+		// }
+		"outFields": [{
+			"name": "NAME",
+			"alias": "name"
+		}, ]
+	}, ]
 }
